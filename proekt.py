@@ -1,5 +1,7 @@
 from datetime import datetime
+from twilio.rest import Client
 import time
+
 
 def pill_taken():
     #wave hand for taken
@@ -38,7 +40,8 @@ while True:
     for i in time_for_pill:
         if now.strftime("%H:%M") == i:
             timer(300)
-            #speak
+            
+    time.sleep(interval_pills*60)
         
     
     
